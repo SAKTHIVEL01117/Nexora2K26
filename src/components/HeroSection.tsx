@@ -166,8 +166,53 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEvents, onOpenRe
           <NexoraBadgeLogo className="h-12 sm:h-14 md:h-16" />
         </motion.div>
 
-        {/* Navigation / Events Button */}
-        <motion.div variants={headerVariants}>
+        {/* Navigation / Events Button & Social Links */}
+        <motion.div variants={headerVariants} className="flex items-center gap-2 sm:gap-3">
+          {/* College Website Link */}
+          <MagneticButton glowColor="cyan" strength={0.3}>
+            <a
+              href="https://hit.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Hindusthan Institute of Technology Website"
+              className="px-2.5 py-1.5 rounded-sm border border-cyan-500/30 hover:border-cyan-400 bg-black/50 hover:bg-cyan-950/30 backdrop-blur-md transition-all group flex items-center gap-2 shadow-[0_0_10px_rgba(6,182,212,0.1)] hover:shadow-[0_0_15px_rgba(6,182,212,0.4)] cursor-pointer"
+            >
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-xs bg-white p-0.5 flex items-center justify-center shadow-xs">
+                <img
+                  src="/hitechlogo.svg"
+                  alt="HIT Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="hidden md:inline font-mono text-xs font-semibold text-gray-200 group-hover:text-cyan-300 tracking-wider">
+                HIT
+              </span>
+            </a>
+          </MagneticButton>
+
+          {/* Instagram Profile Link */}
+          <MagneticButton glowColor="red" strength={0.3}>
+            <a
+              href="https://www.instagram.com/hitech_cse/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Follow @hitech_cse on Instagram"
+              className="px-2.5 py-1.5 rounded-sm border border-pink-500/30 hover:border-pink-400 bg-black/50 hover:bg-pink-950/30 backdrop-blur-md transition-all group flex items-center gap-2 shadow-[0_0_10px_rgba(236,72,153,0.1)] hover:shadow-[0_0_15px_rgba(236,72,153,0.4)] cursor-pointer"
+            >
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-xs bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] p-1 flex items-center justify-center shadow-xs">
+                <img
+                  src="/instalogo.svg"
+                  alt="Instagram Logo"
+                  className="w-full h-full object-contain invert"
+                />
+              </div>
+              <span className="hidden md:inline font-mono text-xs font-semibold text-gray-200 group-hover:text-pink-300 tracking-wider">
+                @hitech_cse
+              </span>
+            </a>
+          </MagneticButton>
+
+          {/* Events Button */}
           <MagneticButton onClick={onOpenEvents} glowColor="cyan" strength={0.4}>
             <div className="font-oswald tracking-[0.35em] text-sm sm:text-base md:text-lg font-bold text-gray-100 hover:text-cyan-300 transition-colors uppercase cursor-pointer px-4 py-1.5 rounded-sm border border-cyan-500/30 hover:border-cyan-400 bg-black/40 backdrop-blur-md group flex items-center gap-2">
               <span>EVENTS</span>
@@ -267,8 +312,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEvents, onOpenRe
           </MagneticButton>
 
           {/* Register Now Button with bright red/amber glow */}
-          <MagneticButton onClick={onOpenRegistration || onOpenEvents} glowColor="red" strength={0.45}>
-            <div className="relative px-7 py-3.5 sm:px-9 sm:py-4 bg-gradient-to-r from-red-950/90 via-black/95 to-amber-950/90 border border-red-500/80 hover:border-red-400 text-white rounded-xs font-oswald text-base sm:text-lg tracking-[0.25em] font-semibold uppercase flex items-center gap-3 backdrop-blur-md cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.03] shadow-[0_0_25px_rgba(239,68,68,0.5)] hover:shadow-[0_0_45px_rgba(239,68,68,0.8)]">
+          <MagneticButton glowColor="red" strength={0.45}>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdzhqJtA_FjpI89H02vc4iXDCDq4iiXhNlDKhNYO6EjOzuqQw/viewform?usp=sharing&ouid=110277074914292680257"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative px-7 py-3.5 sm:px-9 sm:py-4 bg-gradient-to-r from-red-950/90 via-black/95 to-amber-950/90 border border-red-500/80 hover:border-red-400 text-white rounded-xs font-oswald text-base sm:text-lg tracking-[0.25em] font-semibold uppercase flex items-center gap-3 backdrop-blur-md cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.03] shadow-[0_0_25px_rgba(239,68,68,0.5)] hover:shadow-[0_0_45px_rgba(239,68,68,0.8)]"
+            >
               {/* Corner Bracket Accents */}
               <span className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-red-400" />
               <span className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-red-400" />
@@ -280,8 +330,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEvents, onOpenRe
               <span className="relative z-10 text-red-100 group-hover:text-amber-200 transition-colors font-bold">
                 REGISTER NOW
               </span>
-              <span className="text-amber-400 font-bold group-hover:translate-x-1 transition-transform"></span>
-            </div>
+              <span className="text-amber-400 font-bold group-hover:translate-x-1 transition-transform">↗</span>
+            </a>
           </MagneticButton>
         </motion.div>
       </main>

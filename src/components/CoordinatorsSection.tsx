@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { User, Phone } from 'lucide-react';
+import { User, Phone, ExternalLink } from 'lucide-react';
 
 interface Coordinator {
   id: string;
@@ -173,8 +173,73 @@ export const CoordinatorsSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="relative z-20 max-w-6xl mx-auto w-full mt-32 sm:mt-48 md:mt-60 pt-16 pb-12 text-center space-y-4 border-t border-red-900/30"
+        className="relative z-20 max-w-6xl mx-auto w-full mt-32 sm:mt-48 md:mt-60 pt-16 pb-12 text-center space-y-6 border-t border-red-900/30"
       >
+        {/* SOCIAL & INSTITUTION LINKS (CIRCLED IN REFERENCE IMAGE) */}
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pb-2">
+          {/* College Website Link Card */}
+          <motion.a
+            href="https://hit.edu.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="group relative flex items-center gap-3 px-4 py-2.5 bg-black/85 hover:bg-cyan-950/40 border border-cyan-500/40 hover:border-cyan-400 rounded-lg backdrop-blur-md transition-all shadow-[0_0_15px_rgba(6,182,212,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] cursor-pointer"
+          >
+            {/* Tech Corner Accents */}
+            <span className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-cyan-400 opacity-60 group-hover:opacity-100" />
+            <span className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-cyan-400 opacity-60 group-hover:opacity-100" />
+
+            <div className="w-9 h-9 rounded bg-white p-1 flex items-center justify-center shadow-md">
+              <img
+                src="/hitechlogo.svg"
+                alt="Hindusthan Institute of Technology Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="text-left">
+              <div className="font-mono text-[10px] text-cyan-400/80 group-hover:text-cyan-300 uppercase tracking-widest leading-none">
+                COLLEGE WEBSITE
+              </div>
+              <div className="font-oswald text-sm sm:text-base font-bold text-white group-hover:text-cyan-200 tracking-wider flex items-center gap-1.5 mt-0.5">
+                <span>hit.edu.in</span>
+                <ExternalLink className="w-3.5 h-3.5 text-cyan-400 opacity-70 group-hover:opacity-100 transition-opacity" />
+              </div>
+            </div>
+          </motion.a>
+
+          {/* Instagram Link Card */}
+          <motion.a
+            href="https://www.instagram.com/hitech_cse/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="group relative flex items-center gap-3 px-4 py-2.5 bg-black/85 hover:bg-pink-950/40 border border-pink-500/40 hover:border-pink-400 rounded-lg backdrop-blur-md transition-all shadow-[0_0_15px_rgba(236,72,153,0.15)] hover:shadow-[0_0_25px_rgba(236,72,153,0.4)] cursor-pointer"
+          >
+            {/* Tech Corner Accents */}
+            <span className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-pink-400 opacity-60 group-hover:opacity-100" />
+            <span className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-pink-400 opacity-60 group-hover:opacity-100" />
+
+            <div className="w-9 h-9 rounded bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] p-1.5 flex items-center justify-center shadow-md">
+              <img
+                src="/instalogo.svg"
+                alt="Instagram Logo"
+                className="w-full h-full object-contain invert"
+              />
+            </div>
+            <div className="text-left">
+              <div className="font-mono text-[10px] text-pink-400/80 group-hover:text-pink-300 uppercase tracking-widest leading-none">
+                INSTAGRAM
+              </div>
+              <div className="font-oswald text-sm sm:text-base font-bold text-white group-hover:text-pink-200 tracking-wider flex items-center gap-1.5 mt-0.5">
+                <span>@hitech_cse</span>
+                <ExternalLink className="w-3.5 h-3.5 text-pink-400 opacity-70 group-hover:opacity-100 transition-opacity" />
+              </div>
+            </div>
+          </motion.a>
+        </div>
+
         {/* Tech Hash Lines & NEXORA 2K26 Title */}
         <div className="flex items-center justify-center gap-4">
           <div className="flex items-center gap-1 text-red-600/80 font-mono text-sm tracking-tighter select-none">

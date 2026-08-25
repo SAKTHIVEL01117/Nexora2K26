@@ -6,7 +6,6 @@ import {
   Brain,
   Code2,
   Terminal,
-  Rocket,
   FileText,
   Network,
   Gavel,
@@ -174,9 +173,9 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onBackToHero }) =>
             <div className="h-[1px] flex-1 bg-gradient-to-r from-cyan-500/60 to-transparent ml-2" />
           </div>
 
-          {/* Cards Grid (6 Columns across wide screens) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4">
-            {/* 01 THINKS PHERE */}
+          {/* Cards Grid (5 Columns across wide screens) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+            {/* 01 THINK SPHERE */}
             <motion.div
               whileHover={{ y: -3 }}
               className="bg-black/80 backdrop-blur-md border border-cyan-500/60 rounded-lg p-3 sm:p-4 flex flex-col justify-between space-y-3 shadow-[0_0_12px_rgba(6,182,212,0.12)]"
@@ -251,7 +250,7 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onBackToHero }) =>
               </div>
             </motion.div>
 
-            {/* 04 PRODUCT LAUNCH CHALLENGE */}
+            {/* 04 DESIGN MIRROR */}
             <motion.div
               whileHover={{ y: -3 }}
               className="bg-black/80 backdrop-blur-md border border-cyan-500/60 rounded-lg p-3 sm:p-4 flex flex-col justify-between space-y-3 shadow-[0_0_12px_rgba(6,182,212,0.12)]"
@@ -259,31 +258,6 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onBackToHero }) =>
               <div className="space-y-2">
                 <span className="px-1.5 py-0.5 bg-cyan-500 text-black font-mono text-[10px] font-bold rounded-xs inline-block">
                   04
-                </span>
-                <div className="text-center space-y-2 pt-1">
-                  <Rocket className="w-8 h-8 text-cyan-400 mx-auto stroke-[1.5]" />
-                  <h3 className="font-oswald text-sm font-bold text-white uppercase tracking-wider">
-                    PRODUCT LAUNCH CHALLENGE
-                  </h3>
-                  <p className="text-[11px] text-neutral-300 font-sans leading-snug">
-                    Launch a new product by preparing a marketing strategy and presenting it.
-                  </p>
-                </div>
-              </div>
-              <div className="pt-2 border-t border-cyan-900/40 flex items-center justify-center gap-1 text-[10px] font-mono text-cyan-400">
-                <Clock className="w-3 h-3 text-cyan-400" />
-                <span>90 MINS</span>
-              </div>
-            </motion.div>
-
-            {/* 05 DESIGN MIRROR */}
-            <motion.div
-              whileHover={{ y: -3 }}
-              className="bg-black/80 backdrop-blur-md border border-cyan-500/60 rounded-lg p-3 sm:p-4 flex flex-col justify-between space-y-3 shadow-[0_0_12px_rgba(6,182,212,0.12)]"
-            >
-              <div className="space-y-2">
-                <span className="px-1.5 py-0.5 bg-cyan-500 text-black font-mono text-[10px] font-bold rounded-xs inline-block">
-                  05
                 </span>
                 <div className="text-center space-y-2 pt-1">
                   <FileText className="w-8 h-8 text-cyan-400 mx-auto stroke-[1.5]" />
@@ -301,14 +275,14 @@ export const EventsSection: React.FC<EventsSectionProps> = ({ onBackToHero }) =>
               </div>
             </motion.div>
 
-            {/* 06 PROJECT EXPO */}
+            {/* 05 PROJECT EXPO */}
             <motion.div
               whileHover={{ y: -3 }}
               className="bg-black/80 backdrop-blur-md border border-cyan-500/60 rounded-lg p-3 sm:p-4 flex flex-col justify-between space-y-3 shadow-[0_0_12px_rgba(6,182,212,0.12)]"
             >
               <div className="space-y-2">
                 <span className="px-1.5 py-0.5 bg-cyan-500 text-black font-mono text-[10px] font-bold rounded-xs inline-block">
-                  06
+                  05
                 </span>
                 <div className="text-center space-y-2 pt-1">
                   <Network className="w-8 h-8 text-cyan-400 mx-auto stroke-[1.5]" />
