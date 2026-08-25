@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" width="360" height="480">
+  <!-- Card Outer Background -->
+  <rect x="5" y="5" width="350" height="470" rx="24" ry="24" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+  
+  <!-- Top Text: HINDUSTHAN -->
+  <text x="180" y="52" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="28" fill="#111827" text-anchor="middle" letter-spacing="2">HINDUSTHAN</text>
+  
+  <!-- Subtext: EDUCATIONAL AND -->
+  <text x="180" y="78" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="16" fill="#1f2937" text-anchor="middle" letter-spacing="3">EDUCATIONAL AND</text>
+
+  <!-- Vertical Right Text: CHARITABLE TRUST -->
+  <g transform="translate(325, 230) rotate(90)">
+    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-weight="800" font-size="18" fill="#111827" text-anchor="middle" letter-spacing="4">CHARITABLE TRUST</text>
+  </g>
+
+  <!-- Yellow Tombstone Arch Shield -->
+  <path d="M 60 115 A 65 65 0 0 1 240 115 L 240 370 L 60 370 Z" fill="#FEDB00" stroke="#111827" stroke-width="2.5"/>
+
+  <!-- Hand & Torch Graphic inside yellow arch -->
+  <g transform="translate(15, 10)">
+    <!-- Flame Outer -->
+    <path d="M 135 150 C 120 120, 130 90, 150 75 C 160 90, 175 80, 180 65 C 200 85, 215 105, 205 130 C 220 115, 225 125, 215 145 C 205 165, 175 175, 135 150 Z" fill="#E63946" stroke="#111827" stroke-width="2"/>
+    <!-- Flame Inner Core -->
+    <path d="M 150 145 C 142 130, 150 110, 165 95 C 172 105, 182 100, 185 90 C 198 105, 205 118, 198 135 C 188 150, 170 155, 150 145 Z" fill="#F4A261" stroke="#111827" stroke-width="1.5"/>
+
+    <!-- Torch Bowl -->
+    <polygon points="120,180 210,180 195,200 135,200" fill="#6C757D" stroke="#111827" stroke-width="2.5"/>
+
+    <!-- Torch Handle Column -->
+    <rect x="150" y="200" width="30" height="130" fill="#495057" stroke="#111827" stroke-width="2.5"/>
+    <ellipse cx="165" cy="330" rx="18" ry="8" fill="#343A40" stroke="#111827" stroke-width="2"/>
+
+    <!-- Hands Holding Torch -->
+    <!-- Left Arm/Hand -->
+    <path d="M 70 340 Q 120 300 150 225 L 175 225 C 165 260, 140 310, 110 360 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5"/>
+    <ellipse cx="112" cy="318" rx="8" ry="12" fill="#111827" transform="rotate(-30 112 318)"/>
+
+    <!-- Right Arm/Hand -->
+    <path d="M 260 320 Q 210 280 180 235 L 160 235 C 175 270, 195 305, 220 350 Z" fill="#ffffff" stroke="#111827" stroke-width="2.5"/>
+
+    <!-- Hand Grips (Fingers) on handle -->
+    <rect x="145" y="228" width="40" height="8" rx="3" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <rect x="145" y="238" width="40" height="8" rx="3" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <rect x="145" y="248" width="40" height="8" rx="3" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <rect x="145" y="258" width="40" height="8" rx="3" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+  </g>
+
+  <!-- Bottom Text: HITECH -->
+  <text x="180" y="445" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="38" fill="#111827" text-anchor="middle" letter-spacing="6">HITECH</text>
+</svg>
