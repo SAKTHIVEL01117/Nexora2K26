@@ -19,7 +19,8 @@ export interface RegistrationFormData {
 }
 
 export interface EventRound {
-  roundNumber: number;
+  roundNumber?: number;
+  stageBadge?: string;
   title: string;
   duration: string;
   description: string;
@@ -38,11 +39,13 @@ export interface EventDetail {
   location?: string;
   description: string;
   overview?: string;
+  formatDetails?: { label: string; value: string }[];
   rounds?: EventRound[];
   evaluation?: {
     title: string;
     description: string;
     focusPoints?: string[];
+    criteriaTable?: { criteria: string; marks: string | number }[];
   };
   requirements?: string[];
   rules?: string[];

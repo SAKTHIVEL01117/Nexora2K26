@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'motion/react';
 import Lenis from 'lenis';
 import { BackgroundVideo } from './components/BackgroundVideo';
@@ -12,12 +12,10 @@ import { CountdownTimer } from './components/CountdownTimer';
 import { FloatingParticles } from './components/FloatingParticles';
 import { EventsSection } from './components/EventsSection';
 import { CoordinatorsSection } from './components/CoordinatorsSection';
-import { EventsModal } from './components/EventsModal';
 import { CustomCursor } from './components/CustomCursor';
 import { PageTransitionOverlay } from './components/PageTransitionOverlay';
 
 export default function App() {
-  const [isEventsModalOpen, setIsEventsModalOpen] = useState(false);
   const eventsSectionRef = useRef<HTMLDivElement | null>(null);
   const coordinatorsSectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -55,8 +53,6 @@ export default function App() {
   const scrollToEvents = () => {
     if (eventsSectionRef.current) {
       eventsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      setIsEventsModalOpen(true);
     }
   };
 
@@ -90,7 +86,6 @@ export default function App() {
         <section className="min-h-screen flex flex-col justify-between">
           <HeroSection
             onOpenEvents={scrollToEvents}
-            onOpenRegistration={() => setIsEventsModalOpen(true)}
           />
         </section>
 
@@ -116,7 +111,6 @@ export default function App() {
         >
           <EventsSection
             onBackToHero={scrollToTop}
-            onOpenRegistration={() => setIsEventsModalOpen(true)}
           />
         </motion.section>
 
@@ -132,13 +126,6 @@ export default function App() {
           <CoordinatorsSection />
         </motion.section>
       </div>
-
-      {/* Global Events Quick Modal */}
-      <EventsModal isOpen={isEventsModalOpen} onClose={() => setIsEventsModalOpen(false)} />
     </div>
   );
 }
-
-
-
-
