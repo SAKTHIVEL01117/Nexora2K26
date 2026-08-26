@@ -114,7 +114,10 @@ export default function App() {
           transition={{ duration: 0.45, ease: 'easeOut' }}
           className="min-h-screen flex flex-col justify-between"
         >
-          <EventsSection onBackToHero={scrollToTop} />
+          <EventsSection
+            onBackToHero={scrollToTop}
+            onOpenRegistration={() => setIsEventsModalOpen(true)}
+          />
         </motion.section>
 
         {/* Section 3: Event Coordinators & Footer Section with Fast Scroll Reveal */}

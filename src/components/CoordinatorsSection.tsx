@@ -9,7 +9,13 @@ interface Coordinator {
   phone: string;
 }
 
-const coordinatorsList: Coordinator[] = [
+const staffCoordinatorsList: Coordinator[] = [
+  { id: '01', name: 'Ms. KAVIYA.R', role: 'STAFF COORDINATOR', phone: '93607 34997' },
+  { id: '02', name: 'Mr. SATHISHKUMAR.S', role: 'STAFF COORDINATOR', phone: '95005 70248' },
+  { id: '03', name: 'Mr. A.GANESAN', role: 'STAFF COORDINATOR', phone: '90802 36593' },
+];
+
+const studentCoordinatorsList: Coordinator[] = [
   { id: '01', name: 'Mr ROHITH P', role: 'PRESIDENT', phone: '99526 52246' },
   { id: '02', name: 'Mr RAGURAMAN', role: 'VICE PRESIDENT', phone: '98439 94351' },
   { id: '03', name: 'Mr SIVANESAN K', role: 'DIRECTOR OF TECHNICAL ACTIVITIES', phone: '73970 31907' },
@@ -111,14 +117,87 @@ export const CoordinatorsSection: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* COORDINATORS GRID & LEFT STICKER */}
+      {/* 1. STAFF COORDINATORS SECTION */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="relative z-10 max-w-6xl mx-auto w-full my-4 space-y-4"
+      >
+        {/* Subheader: Staff Coordinators */}
+        <div className="flex items-center gap-2 px-2">
+          <span className="px-2 py-0.5 bg-gradient-to-r from-amber-500 to-red-600 text-black font-mono text-xs font-bold rounded-xs">
+            FACULTY
+          </span>
+          <h3 className="font-oswald text-sm sm:text-base font-bold tracking-[0.2em] text-amber-300 uppercase">
+            STAFF COORDINATORS
+          </h3>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-amber-500/60 to-transparent ml-2" />
+        </div>
+
+        {/* 3 Staff Coordinator Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          {staffCoordinatorsList.map((coordinator) => (
+            <motion.div
+              key={coordinator.id}
+              whileHover={{ y: -3, scale: 1.01 }}
+              className="relative bg-black/90 backdrop-blur-md border border-amber-500/60 hover:border-amber-400 rounded-lg p-3.5 sm:p-4 shadow-[0_0_15px_rgba(245,158,11,0.15)] flex items-center justify-between gap-3 group transition-all"
+            >
+              {/* Red Bottom-Right Shadow Accent for Cards */}
+              <div className="absolute inset-0 border-r-2 border-b-2 border-red-600/80 rounded-lg pointer-events-none" />
+
+              {/* Left Badge Number & Avatar Icon */}
+              <div className="flex items-center gap-3">
+                <span className="px-2 py-0.5 border border-amber-400/80 text-amber-300 font-mono text-xs font-bold rounded-xs bg-amber-950/40">
+                  {coordinator.id}
+                </span>
+
+                <div className="w-10 h-10 rounded-full border border-amber-500/60 bg-amber-950/30 flex items-center justify-center text-amber-400 group-hover:border-amber-400 group-hover:text-amber-300 transition-colors">
+                  <User className="w-5 h-5" />
+                </div>
+              </div>
+
+              {/* Right Side Coordinator Info */}
+              <div className="flex-1 text-left space-y-0.5">
+                <h3 className="font-oswald text-sm sm:text-base font-bold tracking-wider text-white uppercase group-hover:text-amber-300 transition-colors">
+                  {coordinator.name}
+                </h3>
+                <div className="font-mono text-[10px] sm:text-[11px] text-amber-300/80 tracking-widest uppercase">
+                  {coordinator.role}
+                </div>
+                <a
+                  href={`tel:${coordinator.phone.replace(/\s+/g, '')}`}
+                  className="font-mono text-xs sm:text-sm font-bold text-amber-400 hover:text-amber-200 tracking-wider flex items-center gap-1 transition-colors cursor-pointer"
+                >
+                  <Phone className="w-3 h-3 text-amber-400" />
+                  <span>{coordinator.phone}</span>
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* 2. STUDENT COORDINATORS SECTION & LEFT STICKER */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.15 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="relative z-10 max-w-6xl mx-auto w-full my-6"
+        className="relative z-10 max-w-6xl mx-auto w-full my-6 space-y-4"
       >
+        {/* Subheader: Student Coordinators */}
+        <div className="flex items-center gap-2 px-2">
+          <span className="px-2 py-0.5 bg-cyan-500 text-black font-mono text-xs font-bold rounded-xs">
+            CORE
+          </span>
+          <h3 className="font-oswald text-sm sm:text-base font-bold tracking-[0.2em] text-cyan-300 uppercase">
+            STUDENT COORDINATORS
+          </h3>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-cyan-500/60 to-transparent ml-2" />
+        </div>
+
         {/* Bottom Left Comic Sticker "BREET!" */}
         <div className="absolute -left-4 sm:-left-12 bottom-12 z-30 transform -rotate-6 bg-white text-red-600 font-bebas font-black text-lg sm:text-2xl px-3 py-0.5 border-2 border-red-600 shadow-[4px_4px_0px_#ef4444] tracking-wider select-none hidden lg:block">
           BREET!
@@ -126,7 +205,7 @@ export const CoordinatorsSection: React.FC = () => {
 
         {/* 3x3 Grid of Coordinators */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {coordinatorsList.map((coordinator) => (
+          {studentCoordinatorsList.map((coordinator) => (
             <motion.div
               key={coordinator.id}
               whileHover={{ y: -3, scale: 1.01 }}

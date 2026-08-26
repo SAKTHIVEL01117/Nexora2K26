@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Calendar, MapPin, Trophy, Sparkles, CheckCircle2 } from 'lucide-react';
 import { EventItem, RegistrationFormData } from '../types';
+import { GOOGLE_FORM_REGISTRATION_URL } from '../constants';
 
 const EVENTS_DATA: EventItem[] = [
   {
@@ -163,12 +164,14 @@ export const EventsModal: React.FC<EventsModalProps> = ({ isOpen, onClose }) => 
                         ))}
                       </div>
 
-                      <button
-                        onClick={() => setShowRegisterForm(true)}
+                      <a
+                        href={GOOGLE_FORM_REGISTRATION_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="px-4 py-1.5 text-xs font-oswald tracking-widest uppercase bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-500 hover:to-rose-600 text-white font-bold rounded-md shadow-[0_0_15px_rgba(225,29,72,0.4)] transition-all cursor-pointer flex items-center gap-2"
                       >
-                        <Sparkles className="w-3.5 h-3.5" /> Register Now
-                      </button>
+                        <Sparkles className="w-3.5 h-3.5" /> Register Now ↗
+                      </a>
                     </div>
 
                     {/* Events Grid */}

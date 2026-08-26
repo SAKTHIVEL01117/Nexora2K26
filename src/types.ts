@@ -17,3 +17,35 @@ export interface RegistrationFormData {
   department: string;
   selectedEvents: string[];
 }
+
+export interface EventRound {
+  roundNumber: number;
+  title: string;
+  duration: string;
+  description: string;
+  keyPoints?: string[];
+}
+
+export interface EventDetail {
+  id: string;
+  code: string;
+  title: string;
+  tagline?: string;
+  category: 'Technical' | 'Non-Technical' | 'Workshop' | 'Flagship';
+  accentColor: 'cyan' | 'red' | 'amber';
+  time: string;
+  duration?: string;
+  location?: string;
+  description: string;
+  overview?: string;
+  rounds?: EventRound[];
+  evaluation?: {
+    title: string;
+    description: string;
+    focusPoints?: string[];
+  };
+  requirements?: string[];
+  rules?: string[];
+  slogan?: string;
+  prizePool?: string;
+}

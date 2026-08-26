@@ -3,6 +3,7 @@ import { motion, Variants, useMotionValue, useTransform, useSpring } from 'motio
 import { HitechTrustLogo, NexoraBadgeLogo } from './Logos';
 import { MagneticButton } from './MagneticButton';
 import { InteractiveGeometricGrid } from './InteractiveGeometricGrid';
+import { GOOGLE_FORM_REGISTRATION_URL } from '../constants';
 
 interface HeroSectionProps {
   onOpenEvents: () => void;
@@ -314,7 +315,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEvents, onOpenRe
           {/* Register Now Button with bright red/amber glow */}
           <MagneticButton glowColor="red" strength={0.45}>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdzhqJtA_FjpI89H02vc4iXDCDq4iiXhNlDKhNYO6EjOzuqQw/viewform?usp=sharing&ouid=110277074914292680257"
+              href={GOOGLE_FORM_REGISTRATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="relative px-7 py-3.5 sm:px-9 sm:py-4 bg-gradient-to-r from-red-950/90 via-black/95 to-amber-950/90 border border-red-500/80 hover:border-red-400 text-white rounded-xs font-oswald text-base sm:text-lg tracking-[0.25em] font-semibold uppercase flex items-center gap-3 backdrop-blur-md cursor-pointer overflow-hidden transition-all duration-300 hover:scale-[1.03] shadow-[0_0_25px_rgba(239,68,68,0.5)] hover:shadow-[0_0_45px_rgba(239,68,68,0.8)]"
