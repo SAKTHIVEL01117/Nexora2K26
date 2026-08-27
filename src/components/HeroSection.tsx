@@ -335,6 +335,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEvents, onOpenRe
             </a>
           </MagneticButton>
         </motion.div>
+
+        {/* Registration Deadline Notice */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.65 }}
+          className="z-20 flex items-center justify-center -mt-0.5 sm:-mt-1"
+        >
+          <div className="relative px-6 py-2.5 sm:px-8 sm:py-3.5 bg-black/70 border border-red-500/50 hover:border-red-400/80 rounded-full backdrop-blur-md flex items-center gap-3 sm:gap-4 shadow-[0_0_25px_rgba(239,68,68,0.25)] transition-all duration-300">
+            <span className="relative flex h-2.5 w-2.5 sm:h-3.5 sm:w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 bg-red-500 shadow-[0_0_10px_#ef4444]" />
+            </span>
+            <p className="font-oswald tracking-[0.18em] sm:tracking-[0.22em] text-sm sm:text-base md:text-lg font-semibold uppercase text-neutral-200 text-center">
+              The Registration closes on{' '}
+              <span className="text-amber-400 font-bold drop-shadow-[0_0_10px_rgba(251,191,36,0.5)]">10/09/2026</span>.{' '}
+              <span className="text-red-400 font-bold drop-shadow-[0_0_10px_rgba(248,113,113,0.5)]">Register soon!</span>
+            </p>
+          </div>
+        </motion.div>
       </main>
 
       {/* FOOTER / BOTTOM CONTENT SECTION */}

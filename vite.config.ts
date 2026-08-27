@@ -8,7 +8,7 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss()],
 
     // Allows the dist folder to work when opening index.html directly
-    base: './',
+    base: '/Nexora2K26/',
 
     resolve: {
       alias: {
