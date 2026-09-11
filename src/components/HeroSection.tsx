@@ -350,7 +350,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEvents, onOpenRe
             </span>
             <p className="font-oswald tracking-[0.18em] sm:tracking-[0.22em] text-sm sm:text-base md:text-lg font-semibold uppercase text-neutral-200 text-center">
               The Registration closes on{' '}
-              <span className="text-amber-400 font-bold drop-shadow-[0_0_10px_rgba(251,191,36,0.5)]">10/09/2026</span>.{' '}
+              <span className="text-amber-400 font-bold drop-shadow-[0_0_10px_rgba(251,191,36,0.5)]">14/09/2026</span>.{' '}
               <span className="text-red-400 font-bold drop-shadow-[0_0_10px_rgba(248,113,113,0.5)]">Register soon!</span>
             </p>
           </div>

@@ -7,8 +7,8 @@ export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
 
-    // Allows the dist folder to work when opening index.html directly
-    base: '/Nexora2K26/',
+    // Firebase Hosting serves from root, so base must be '/'
+    base: '/',
 
     resolve: {
       alias: {
