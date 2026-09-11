@@ -1,0 +1,6 @@
+{
+  "name": "Nexora 2K26",
+  "description": "Hero section for Nexora 2K26 tech symposium with futuristic dark aesthetic and high precision layout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
